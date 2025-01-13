@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Escriptori/VS"
+		},
+		{
+			"name": "tema-1-introducci-n-kevinbernat05",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "tema-1-introducci-n-kevinbernat05"
+	}
+}
