@@ -1,5 +1,5 @@
 body {
-    background-image: url('Multi/TheLastOfUs_Background.jpg');
+    background-image: url('Multi/Ventana_TLOU.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -8,6 +8,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    color: white;
+
 }
 
 .main-container {
