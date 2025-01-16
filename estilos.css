@@ -1,5 +1,5 @@
 body {
-    background-image: url('Multi/Ventana_TLOU.jpg');
+    background-image: url('Multi/wallpaperflare.com_wallpaper\ \(2\).jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: white;
+    color: whitesmoke;
 
 }
 
@@ -21,27 +21,82 @@ body {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-
-}
-
-.titulo {
-    text-align: center;
-    font-family: 'Bebas Neue', sans-serif;
-    color: white;
-    margin: 0;
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
 }
 
 .texto-izquierda {
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    left: 5%; /* Cercano al borde izquierdo */
+    transform: translateY(-50%); /* Centrar perfectamente */
     font-family: 'Bebas Neue', sans-serif;
-    color: white;
-    max-width: 400px;
-    text-align: justify;
-    margin-left: 20px;
-    padding-top: 20px;
+    color: whitesmoke;
+    max-width: 300px;
     z-index: 1;
+}
+.requisitos {
+    position: absolute;
+    top: 55%; /* Centrado verticalmente */
+    left: 5%; /* Cercano al borde izquierdo */
+    transform: translateY(-50%); /* Centrar perfectamente */
+    font-family: 'Bebas Neue', sans-serif;
+    color: whitesmoke;
+    max-width: 300px;
+    z-index: 1;
+}
+
+details {
+    font-family: 'Bebas Neue', sans-serif;
+    color: whitesmoke;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    text-align: justify;
+}
+
+details summary {
+    font-size: 1.5rem;
+    list-style: none; /* Quita el estilo de lista predeterminado */
+    cursor: pointer;
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Distribuye los botones uniformemente */
+    align-items: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0; /* Fija la barra al fondo */
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); /* Sombras hacia arriba (opcional) */
+    background-color: transparent; /* Fondo completamente transparente */
+}
+
+.navbar a {
+    text-decoration: none; /* Quita el subrayado */
+    color: whitesmoke; /* Color blanco */
+    font-family: 'Bebas Neue', sans-serif; /* Usa tu fuente importada */
+    font-size: 2rem; /* Tamaño del texto */
+    padding: 5px 15px; /* Espaciado interno */
+    border: 2px solid transparent; /* Bordes invisibles por defecto */
+    transition: all 0.3s ease; /* Transición para hover */
+}
+
+.nav-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar a:visited {
+    color: whitesmoke; /* Mantén el color blanco después de visitar */
 }
 
 html,body {
