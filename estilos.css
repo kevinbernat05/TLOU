@@ -23,19 +23,8 @@ body {
     position: relative;
 }
 
-.texto-izquierda {
+.texto-izquierda, .requisitos {
     position: absolute;
-    top: 50%; /* Centrado verticalmente */
-    left: 5%; /* Cercano al borde izquierdo */
-    transform: translateY(-50%); /* Centrar perfectamente */
-    font-family: 'Bebas Neue', sans-serif;
-    color: whitesmoke;
-    max-width: 300px;
-    z-index: 1;
-}
-.requisitos {
-    position: absolute;
-    top: 55%; /* Centrado verticalmente */
     left: 5%; /* Cercano al borde izquierdo */
     transform: translateY(-50%); /* Centrar perfectamente */
     font-family: 'Bebas Neue', sans-serif;
@@ -44,13 +33,21 @@ body {
     z-index: 1;
 }
 
+.texto-izquierda {
+    top: 50%;
+}
+
+.requisitos {
+    top: calc(50% + 50px); /* Ajusta esto según el tamaño del contenido */
+}
+
 details {
-    font-family: 'Bebas Neue', sans-serif;
-    color: whitesmoke;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    text-align: justify;
+    position: relative;
+    margin-bottom: 10px;
+}
+details[open] p {
+    transform: translateY(100%);
+    z-index: 2;
 }
 
 details summary {
@@ -64,6 +61,11 @@ details p {
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    top: -100%;
+    left: 0;
+    width: 100%;
 }
 
 .navbar {
@@ -84,7 +86,7 @@ details p {
     text-decoration: none; /* Quita el subrayado */
     color: whitesmoke; /* Color blanco */
     font-family: 'Bebas Neue', sans-serif; /* Usa tu fuente importada */
-    font-size: 2rem; /* Tamaño del texto */
+    font-size: 2.2rem; /* Tamaño del texto */
     padding: 5px 15px; /* Espaciado interno */
     border: 2px solid transparent; /* Bordes invisibles por defecto */
     transition: all 0.3s ease; /* Transición para hover */
