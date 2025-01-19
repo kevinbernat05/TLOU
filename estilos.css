@@ -9,9 +9,14 @@ body {
     justify-content: center;
     align-items: flex-end;
     color: whitesmoke;
-
+    font-family: 'Bebas Neue', sans-serif;
 }
-
+.video_youtube  {
+    display: flex;
+    justify-content: flex-end;
+    width: 99%;
+    height: 65%;
+}
 .main-container {
     display: flex;
     justify-content: flex-start;
@@ -23,10 +28,17 @@ body {
     position: relative;
 }
 
-.texto-izquierda, .requisitos {
+.texto-izquierda {
     position: absolute;
-    left: 5%; /* Cercano al borde izquierdo */
-    transform: translateY(-50%); /* Centrar perfectamente */
+    left: 5%; 
+    font-family: 'Bebas Neue', sans-serif;
+    color: whitesmoke;
+    max-width: 300px;
+    z-index: 1;
+}
+.requisitos {
+    position: absolute;
+    left: 5%; 
     font-family: 'Bebas Neue', sans-serif;
     color: whitesmoke;
     max-width: 300px;
@@ -34,11 +46,11 @@ body {
 }
 
 .texto-izquierda {
-    top: 50%;
+    top: 45%;
 }
 
 .requisitos {
-    top: calc(50% + 50px); /* Ajusta esto según el tamaño del contenido */
+    top: 50% /* Ajusta esto según el tamaño del contenido */
 }
 
 details {
@@ -46,12 +58,12 @@ details {
     margin-bottom: 10px;
 }
 details[open] p {
-    transform: translateY(100%);
+    transform: translateY(-130%);
     z-index: 2;
 }
 
 details summary {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     list-style: none; /* Quita el estilo de lista predeterminado */
     cursor: pointer;
     margin-bottom: 10px; /* Espacio debajo del título */
@@ -86,7 +98,7 @@ details p {
     text-decoration: none; /* Quita el subrayado */
     color: whitesmoke; /* Color blanco */
     font-family: 'Bebas Neue', sans-serif; /* Usa tu fuente importada */
-    font-size: 2.2rem; /* Tamaño del texto */
+    font-size: 2.6rem; /* Tamaño del texto */
     padding: 5px 15px; /* Espaciado interno */
     border: 2px solid transparent; /* Bordes invisibles por defecto */
     transition: all 0.3s ease; /* Transición para hover */
@@ -104,5 +116,20 @@ details p {
 html,body {
     overflow: hidden;
 }
+dl {
+    display: grid;
+    grid-template-columns: max-content auto; /* La primera columna se ajusta al contenido */
+    gap: 10px; /* Espacio entre los términos y sus descripciones */
+}
+
+dt {
+    font-size: 1.2rem;
+}
+
+dd {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1rem;
+}
+
 
   
