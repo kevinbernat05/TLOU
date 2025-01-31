@@ -7,43 +7,13 @@
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-    <!-- meto algo de estilos en el html por que si no el validador me 
-     da varios errores de funciones deprecated-->
-    <style>
-        details {
-            margin: 10px 0;
-        }
 
-        summary {
-            cursor: pointer;
-            display: flex;
-            align-items: center; /* Alinea verticalmente el título y la flecha */
-            font-size: 1.2em; /* Ajusta el tamaño del texto */
-        }
-
-        summary::-webkit-details-marker {
-            display: none; /* Elimina la flecha predeterminada */
-        }
-
-        summary:before {
-            content: '▶'; /* Usamos una flecha personalizada */
-            font-size: 1.5em;
-            margin-right: 10px; /* Espacio entre la flecha y el texto */
-            transition: transform 0.3s ease; /* Efecto suave al cambiar de dirección */
-        }
-
-        details[open] summary:before {
-            transform: rotate(90deg); /* Rota la flecha cuando se abre */
-        }
-    </style>
 
 </head>
 
 <body>
     <div class="main-container">
         <header>
-            <h1><strong>The Last of Us</strong></h1>
-            <p class="autores"><em>Creado por: Kevin Romero Bernat</em></p>
             <nav class="navbar">
                 <a href="informacion.html" class="nav-link">Información</a>
                 <a href="index.html" class="nav-link active">The Last of Us</a>
@@ -51,96 +21,89 @@
             </nav>
         </header>
 
-        <section class="introduccion">
-            <h2>Bienvenidos al mundo de The Last of Us</h2>
-            <p>En este juego de acción y supervivencia, los jugadores deben enfrentarse a una sociedad devastada por una infección que convierte a los humanos en criaturas monstruosas. Aquí exploraremos los personajes y las armas más importantes del juego.</p>
-        </section>
-
         <main>
-            <section id="trata">
-                <details>
-                    <summary><h2><strong>¿De qué trata?</strong></h2></summary>
-                    <p>
-                        Sin entrar en <em>spoilers</em>, <strong>The Last of Us</strong> nos sumerge en un mundo devastado por una pandemia causada por el hongo <em>Cordyceps</em>. 
-                        Este parásito, que en la vida real solo afecta a insectos, ha mutado en el universo del juego para infectar a los humanos, 
-                        convirtiéndolos en criaturas agresivas sin control sobre sí mismas.
-                    </p>
-            
-                    <p>
-                        Nuestro protagonista, <a href="informacion.html#joel"><strong>Joel</strong></a>, es un hombre marcado por la tragedia, que ha aprendido a sobrevivir en un entorno donde la sociedad ha colapsado 
-                        y la ley del más fuerte es la única que impera. Su vida da un giro inesperado cuando se cruza con <a href="informacion.html#ellie"><strong>Ellie</strong></a>, 
-                        una joven que, a pesar de haber nacido en un mundo hostil, mantiene su espíritu rebelde y su curiosidad intacta.
-                    </p>
-            
-                    <p>
-                        Juntos deben atravesar ciudades en ruinas, enfrentarse a grupos de <del>inocentes</del> saqueadores, milicias despiadadas y, por supuesto, 
-                        a los aterradores <strong>infectados</strong>, seres que han perdido por completo su humanidad.
-                    </p>
-            
-                    <p>
-                        Más allá de la acción y el peligro constante, la historia explora la <em>lucha por la supervivencia</em>, el peso del pasado y la conexión humana 
-                        en un mundo donde la esperanza parece haber desaparecido.
-                    </p>
-                </details>
-            </section>
+            <div id="details">
+                <div id="trata">
+                    <details>
+                        <summary><h2><strong>¿De qué trata?</strong></h2></summary>
+                        <p>
+                            Sin entrar en <em>spoilers</em>, <strong>The Last of Us</strong> nos sumerge en un mundo devastado por una pandemia causada por el hongo <em>Cordyceps</em>. 
+                            Este parásito, que en la vida real solo afecta a insectos, ha mutado en el universo del juego para infectar a los humanos, 
+                            convirtiéndolos en criaturas agresivas sin control sobre sí mismas.
+                        </p>
+                
+                        <p>
+                            Nuestro protagonista, <a href="informacion.html#joel"><strong>Joel</strong></a>, es un hombre marcado por la tragedia, que ha aprendido a sobrevivir en un entorno donde la sociedad ha colapsado 
+                            y la ley del más fuerte es la única que impera. Su vida da un giro inesperado cuando se cruza con <a href="informacion.html#ellie"><strong>Ellie</strong></a>, 
+                            una joven que, a pesar de haber nacido en un mundo hostil, mantiene su espíritu rebelde y su curiosidad intacta.
+                        </p>
+                
+                        <p>
+                            Juntos deben atravesar ciudades en ruinas, enfrentarse a grupos de <del>inocentes</del> saqueadores, milicias despiadadas y, por supuesto, 
+                            a los aterradores <strong>infectados</strong>, seres que han perdido por completo su humanidad.
+                        </p>
+                
+                        <p>
+                            Más allá de la acción y el peligro constante, la historia explora la <em>lucha por la supervivencia</em>, el peso del pasado y la conexión humana 
+                            en un mundo donde la esperanza parece haber desaparecido.
+                        </p>
+                    </details>
+                </div>
 
-            <section id="requisitos">
-                <details>
-                    <summary><h2><strong>Requisitos del sistema</strong></h2></summary>
-                    <dl>
-                        <dt><strong>Procesador:</strong></dt>
-                        <dd>Intel Core i7-8700 / AMD Ryzen 5 3600X</dd>
+                <div id="requisitos">
+                    <details>
+                        <summary><h2><strong>Requisitos del sistema</strong></h2></summary>
+                        <dl>
+                            <dt><strong>Procesador:</strong></dt>
+                            <dd>Intel Core i7-8700 / AMD Ryzen 5 3600X</dd>
 
 
 
-                        <dt><strong>Tarjeta gráfica:</strong></dt>
-                        <dd>NVIDIA GeForce RTX 3060</dd>
+                            <dt><strong>Tarjeta gráfica:</strong></dt>
+                            <dd>NVIDIA GeForce RTX 3060</dd>
 
+                            
+
+                            <dt><strong>Memoria RAM:</strong></dt>
+                            <dd>16 GB</dd>
+
+                            
+
+                            <dt><strong>Sistema Operativo:</strong></dt>
+                            <dd>Windows 10 64-bit</dd>
+
+                            
+
+                            <dt><strong>Almacenamiento:</strong></dt>
+                            <dd>100 GB</dd>
+                        </dl>
+                    </details>
+                </div>
+
+                <div id="multimedia">
+                    <details>
+                        <summary><h2><strong>Multimedia</strong></h2></summary>
+
+                        <h3><strong>Tráiler oficial</strong></h3>
+
+                        <!-- frameborder esta obsoleto, lo corregire con css en la entrega siguiente-->
+                        <div class="video_youtube">
+                            <iframe width="400" height="250" src="https://www.youtube.com/embed/CxVyuE2Nn_w" 
+                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <h3><strong>Banda sonora</strong></h3>
+                        <div class="audio">
+                            <audio controls loop>
+                                <source src="Multi/TLOU-Song.mp3" type="audio/mpeg">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
                         
+                    </details>
+                </div>
 
-                        <dt><strong>Memoria RAM:</strong></dt>
-                        <dd>16 GB</dd>
-
-                        
-
-                        <dt><strong>Sistema Operativo:</strong></dt>
-                        <dd>Windows 10 64-bit</dd>
-
-                        
-
-                        <dt><strong>Almacenamiento:</strong></dt>
-                        <dd>100 GB</dd>
-                    </dl>
-                </details>
-            </section>
-
-            <section id="multimedia">
-                <details>
-                    <summary><h2><strong>Multimedia</strong></h2></summary>
-
-                    <h3><strong>Tráiler oficial</strong></h3>
-
-                    <!-- frameborder esta obsoleto, lo corregire con css en la entrega siguiente-->
-                    <div class="video_youtube">
-                        <iframe width="400" height="250" src="https://www.youtube.com/embed/CxVyuE2Nn_w" 
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-
-                    <h3><strong>Banda sonora</strong></h3>
-                    <div class="audio">
-                        <audio controls loop>
-                            <source src="Multi/TLOU-Song.mp3" type="audio/mpeg">
-                            Tu navegador no soporta el elemento de audio.
-                        </audio>
-                    </div>
-                    
-                </details>
-            </section>
-            
-            <footer>
-                <p>Para más informacin, visita la <a href="https://www.naughtydog.com/" target="_blank"><strong>página oficial de Naughty Dog</strong></a>.</p>
-                <p>&copy; 2025 Kevin Romero Bernat - Proyecto Lenguaje de Marcas</p>
-            </footer>
+            </div>
                 
         </main>
     </div>
