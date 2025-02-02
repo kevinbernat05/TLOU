@@ -190,6 +190,9 @@ details {
     position: relative;
     cursor: pointer;
 }
+.requisitos{
+    overflow: hidden;
+}
 
 details summary {
     flex: 0 0 auto;
@@ -245,14 +248,15 @@ details[open] > *:not(summary) {
     overflow-y: auto;
     background-color: transparent;
     margin-left: 20px;
+    overflow: visible;
 }
 
 #requisitos details[open] > *:not(summary) {
-    left: 260%;
+    left: 210%;
 }
 
 #multimedia details[open] > *:not(summary) {
-    left: 295%;
+    left: 275%;
 }
 
 #trata details[open] > *:not(summary) {
@@ -269,20 +273,7 @@ details h3
 {
     font-size: 1.8rem;
 }
-.requisitos dt{
-    font-size: 1.5rem;
-}
-.requisitos dd{
-    display: block;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    margin-left: 0;
-}
 
-.requisitos dt, .requisitos dd {
-    display: block; /* Esto asegura que estén uno debajo del otro */
-    margin-bottom: 11px; /* Añade un espacio entre ellos */
-}
 
 
 /* -------------------------------------------------- */
@@ -484,4 +475,51 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #ebeb62;
+}
+/* -------------------------------------------------- */
+/*               Estilos para los Requisitos          */
+/* -------------------------------------------------- */
+
+.requisitos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.requisitos dt {
+    font-weight: bold;
+    color: #e7e792;
+}
+
+.requisitos dd {
+    margin-left: 20px;
+    color: #ccc;
+}
+
+/* Diseño de la lista para que se vea ordenada y clara */
+.requisitos dt, .requisitos dd {
+    padding: 5px 0;
+}
+
+/* Resaltar los requisitos */
+.requisitos dt {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.requisitos dd {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding-left: 0px;
+    color: whitesmoke;
+}
+
+/* Para que no se vean tan pegados */
+.requisitos dd:last-child {
+    margin-bottom: 20px;
 }
