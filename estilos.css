@@ -17,6 +17,9 @@ html, body {
 a {
     color: #e7e792;
 }
+a:visited {
+    color: #e7e792; /* Asegura que el color no cambie después de haber sido visitado */
+}
 
 /* -------------------------------------------------- */
 /*               Estilos de la Navbar                 */
