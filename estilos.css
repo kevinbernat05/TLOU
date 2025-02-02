@@ -1,119 +1,77 @@
-body {
+/* -------------------------------------------------- */
+/*                Estilos Generales                  */
+/* -------------------------------------------------- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+    overflow: hidden;
+    color: whitesmoke;
     background-image: url('Multi/wallpaperflare.com_wallpaper\ \(2\).jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    color: whitesmoke;
-    font-family: 'Bebas Neue', sans-serif;
-}
-.video_youtube  {
-    display: flex;
-    justify-content: flex-end;
-    width: 99%;
-    height: 55%;
-}
-.video_youtube details {
-    position: relative;
 }
 
-.video_youtube details[open] iframe {
-    position: absolute;
-    top: 10%; /* Justo debajo del summary */
-    left: -460%;
-    width: 400px;
-    height: 250px;
-    background: black; /* Fondo negro para evitar transparencia */
-    z-index: 10; /* Asegura que esté por encima del texto */
-}
-
-#details {
-    display: flex;
-    flex-direction: column;  /* Apila los details en columna */
-    align-items: flex-start; /* Los alinea a la izquierda */
-    justify-content: center; /* Centra verticalmente en la pantalla */
-    height: 100vh; /* Usa toda la altura disponible */
-    padding-left: 50px; /* Ajusta la distancia desde el borde izquierdo */
-    position: absolute; /* Para asegurarte de que se mueva libremente */
-    left: 0; /* Pega los elementos a la izquierda */
-    top: 50%; /* Punto de referencia para centrar verticalmente */
-    transform: translateY(-50%); /* Centrado vertical exacto */
-}
-.trata {
-    position: absolute;
-    left: 50%; 
-    font-family: 'Bebas Neue', sans-serif;
-    color: whitesmoke;
-    max-width: 300px;
-    z-index: 1;
-}
-.requisitos {
-    position: absolute;
-    left: 5%; 
-    font-family: 'Bebas Neue', sans-serif;
-    color: whitesmoke;
-    max-width: 300px;
-    z-index: 1;
-}
-
-details {
-    position: relative;
-    margin-bottom: 10px;
-}
-details[open] p {
-    transform: translateY(-130%);
-    z-index: 2;
-}
-
-details summary {
-    font-size: 1.8rem;
-    list-style: none; /* Quita el estilo de lista predeterminado */
-    cursor: pointer;
-    margin-bottom: 10px; /* Espacio debajo del título */
-}
-
-details p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-top: 10px;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1;
-    top: -100%;
-    left: 0;
-    width: 100%;
-}
+/* -------------------------------------------------- */
+/*               Estilos de la Navbar                 */
+/* -------------------------------------------------- */
 
 .navbar {
     display: flex;
-    justify-content: space-around; /* Distribuye los botones uniformemente */
+    justify-content: center;
+    gap: 100px;
     align-items: center;
     padding: 10px 20px;
     position: absolute;
-    bottom: 0; /* Fija la barra al fondo */
+    bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* Asegura que esté por encima del contenido */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); /* Sombras hacia arriba (opcional) */
-    background-color: transparent; /* Fondo completamente transparente */
-}
-.navbar a.active {
-    border-bottom: 3px solid whitesmoke; /* Subrayado para resaltar */
-    color: rgb(255, 200, 100); /* Cambia el color */
-    font-weight: bold; /* Hace que el texto se vea más fuerte */
+    z-index: 10;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
 }
 
 .navbar a {
-    text-decoration: none; /* Quita el subrayado */
-    color: whitesmoke; /* Color blanco */
-    font-family: 'Bebas Neue', sans-serif; /* Usa tu fuente importada */
-    font-size: 2.6rem; /* Tamaño del texto */
-    padding: 5px 15px; /* Espaciado interno */
-    border: 2px solid transparent; /* Bordes invisibles por defecto */
-    transition: all 0.3s ease; /* Transición para hover */
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2.6rem;
+    padding: 5px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #fff;
+}
+
+.navbar a:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0;
+    background: #e7e792;
+    scale: 0 1;
+    transition: .3s, translate 0s .3s;
+}
+
+.navbar a:hover:before {
+    scale: 1;
+    translate: 0;
+    transition: .3s;
+}
+
+.navbar a:hover ~ a:before {
+    translate: 100% 0;
+    transition: .2s .2s, scale 0s .4s;
+}
+
+.navbar a:hover ~ a:before {
+    translate: -100% 0;
+    transition: .2s .2s, scale 0s .4s;
 }
 
 .nav-title {
@@ -121,67 +79,403 @@ details p {
     font-weight: bold;
 }
 
-.navbar a:visited {
-    color: whitesmoke; /* Mantén el color blanco después de visitar */
+.navbar a.active {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #e7e792;
 }
 
-html,body {
-    overflow: hidden;
-}
-dl {
-    display: grid;
-    grid-template-columns: max-content auto; /* La primera columna se ajusta al contenido */
-    gap: 10px; /* Espacio entre los términos y sus descripciones */
+/* -------------------------------------------------- */
+/*                Estilos de la Estructura           */
+/* -------------------------------------------------- */
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    margin-right: 120px;
+    margin-left: 120px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
 }
 
-dt {
+.main h2 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.main h3 {
+    font-size: 1.9rem;
+}
+
+.main p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Redondear la barra de desplazamiento */
+.main::-webkit-scrollbar {
+    width: 12px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: #e7e792;
+    border-radius: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* -------------------------------------------------- */
+/*                  Estilos para el Video            */
+/* -------------------------------------------------- */
+
+.video_youtube {
+    display: flex;
+    justify-content: flex-end;
+    width: 99%;
+    height: 55%;
+}
+
+.video_youtube details {
+    position: relative;
+}
+
+.video_youtube details[open] iframe {
+    position: absolute;
+    top: 10%;
+    left: -460%;
+    width: 400px;
+    height: 250px;
+    background: black;
+    z-index: 10;
+}
+
+/* -------------------------------------------------- */
+/*                 Estilos de los Detalles           */
+/* -------------------------------------------------- */
+
+#details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Efecto de hover para los detalles */
+details {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+details summary {
+    flex: 0 0 auto;
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 10px;
+    position: relative;
+    text-transform: uppercase;
+    color: whitesmoke;
+    transition: color 0.3s ease;
+}
+
+/* Barra debajo del summary en hover */
+details summary:before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #e7e792;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+details summary:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Cambio de color en hover */
+details summary:hover {
+    color: #fff;
+}
+
+details[open] summary:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+details[open] summary {
+    color: #e7e792;
+}
+
+details[open] > *:not(summary) {
+    position: relative;
+    left: 65%;
+    padding: 10px;
+    width: 30%;
+    min-width: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+#requisitos details[open] > *:not(summary) {
+    left: 260%;
+}
+
+#multimedia details[open] > *:not(summary) {
+    left: 295%;
+}
+
+#trata details[open] > *:not(summary) {
+    left: 65%;
+}
+
+details p, details dl {
+    margin: 0;
+    padding: 0;
     font-size: 1.2rem;
 }
 
-dd {
-    margin: 0; /* Elimina el margen por defecto */
-    font-size: 1rem;
+details h3
+{
+    font-size: 1.8rem;
 }
-th, td {
-    border: 2px solid #444444;
-    padding: 15px;
+.requisitos dt{
+    font-size: 1.5rem;
 }
-th {
-    background-color: #444444;
-  
+.requisitos dd{
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-left: 0;
 }
-img {
-    width: 100px;
-    height: auto;
-    border-radius: 10px;
+
+.requisitos dt, .requisitos dd {
+    display: block; /* Esto asegura que estén uno debajo del otro */
+    margin-bottom: 11px; /* Añade un espacio entre ellos */
 }
-.tabla_personajes {
+
+
+/* -------------------------------------------------- */
+/*                 Estilos para las Tablas            */
+/* -------------------------------------------------- */
+
+.tablas {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tabla_personajes, .tabla_armas {
     width: 100%;
-    height: 55vh; /* Usa vh para hacerlo más dinámico */
-    position: relative;
-    top: -30%; /* Ajusta este valor según lo que necesites */
-}
-table {
-    width: 80%; /* Elimina 'auto' porque ya lo centramos con flex */
     border-collapse: collapse;
-    background-color: rgba(44, 44, 44, 0.95);
-    max-width: 850px;
+    background-color: rgba(51, 51, 51, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
 }
+
+table {
+    width: 100%;
+    color: #f0f0f0;
+}
+
+td {
+    padding: 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.img-cell img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ccc;
+    max-width: 600px;
+}
+
+tr:hover {
+    background-color: #444;
+}
+
+/* Bordes de la tabla */
+table, th, td {
+    border: 1px solid #555;
+}
+
+/* -------------------------------------------------- */
+/*                    Estilos de Listas               */
+/* -------------------------------------------------- */
+
+ul, ol {
+    font-size: 1.2rem;
+}
+
+/* -------------------------------------------------- */
+/*                  Estilos para las Secciones       */
+/* -------------------------------------------------- */
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+    max-width: 48%;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+    max-width: 48%;
+    margin-left: 10px;
+    margin-top: 78px;
+}
+/* -------------------------------------------------- */
+/*                Estilos para el Formulario          */
+/* -------------------------------------------------- */
+
 #Formulario {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 55vh; 
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%); /* Centra perfectamente */
+    height: 100vh;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin: -70px auto 50px;
 }
 
+/* Formulario - Estilo general */
+form {
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-  
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    display: block;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #555;
+    background-color: #333;
+    color: whitesmoke;
+    transition: border-color 0.3s ease;
+}
+
+.form-item input:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+    border-color: #e7e792; /* Color de foco */
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #e7e792;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e4e462;
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* -------------------------------------------------- */
+/*                Estilo de los campos de entrada    */
+/* -------------------------------------------------- */
+input, select, textarea {
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* -------------------------------------------------- */
+/*                Estilo de los botones              */
+/* -------------------------------------------------- */
+button[type="submit"] {
+    background-color: #e7e792;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ebeb62;
+}

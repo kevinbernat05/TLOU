@@ -6,6 +6,7 @@
     <title>The Last of Us</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
 
 
 
@@ -53,9 +54,9 @@
                 <div id="requisitos">
                     <details>
                         <summary><h2><strong>Requisitos del sistema</strong></h2></summary>
-                        <dl>
+                        <dl class = "requisitos">
                             <dt><strong>Procesador:</strong></dt>
-                            <dd>Intel Core i7-8700 / AMD Ryzen 5 3600X</dd>
+                            <dd>Intel Core i7-8700</dd>
 
 
 
@@ -92,7 +93,7 @@
                             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
-                        <h3><strong>Banda sonora</strong></h3>
+            
                         <div class="audio">
                             <audio controls loop>
                                 <source src="Multi/TLOU-Song.mp3" type="audio/mpeg">
@@ -109,3 +110,15 @@
     </div>
 </body>
 </html>
+<script>
+    document.querySelectorAll('details').forEach(detail => {
+        detail.addEventListener('click', () => {
+            // Cierra todos los detalles excepto el actual
+            document.querySelectorAll('details').forEach(otherDetail => {
+                if (otherDetail !== detail) {
+                    otherDetail.removeAttribute('open');
+                }
+            });
+        });
+    });
+</script>
