@@ -190,10 +190,6 @@ details {
     position: relative;
     cursor: pointer;
 }
-.requisitos{
-    overflow: hidden;
-}
-
 details summary {
     flex: 0 0 auto;
     list-style: none;
@@ -240,7 +236,7 @@ details[open] summary {
 
 details[open] > *:not(summary) {
     position: relative;
-    left: 65%;
+    left: 3%;
     padding: 10px;
     width: 30%;
     min-width: 400px;
@@ -249,18 +245,6 @@ details[open] > *:not(summary) {
     background-color: transparent;
     margin-left: 20px;
     overflow: visible;
-}
-
-#requisitos details[open] > *:not(summary) {
-    left: 210%;
-}
-
-#multimedia details[open] > *:not(summary) {
-    left: 275%;
-}
-
-#trata details[open] > *:not(summary) {
-    left: 65%;
 }
 
 details p, details dl {
@@ -489,6 +473,7 @@ button[type="submit"]:hover {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     margin-top: 20px;
+    background-color: ;
 }
 
 .requisitos dt {
