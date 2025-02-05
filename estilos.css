@@ -201,6 +201,11 @@ details summary {
     transition: color 0.3s ease;
 }
 
+/* Color details p */
+details p {
+    color: whitesmoke;
+}
+
 /* Barra debajo del summary en hover */
 details summary:before {
     content: "";
