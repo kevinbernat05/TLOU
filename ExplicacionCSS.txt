@@ -1,0 +1,15 @@
+﻿Mi web esta dividida en 3 html, Index, información y formulario, en el css hice una parte general que compartian las 3, y luego separe en contenidos, por ejemplo detalles, tablas, listas, etc.
+
+
+Lo que comparten las 3 paginas es el navbar, que simplemente cambia entre active o no para que se sepa en el que estás.
+
+
+En el index, hay 3 desplegables o details, de que trata, requisitos y multimedia, y cada uno enseña su informacion, en este alfinal hay un script pequeño para hacer que cuando abres otro desplegable el anterior se cierre.
+
+
+En Informacion hay un div general, el cual divido en izquierda y derecha, y dentro meto a un lado personajes y al otro armas, ambas son tablas, y no tiene mucho mas, solo son divs un poco raros colocados.
+
+
+Y por ultimo el formulario, que no tiene nada de especial, un par de botones y formato en cada cosa, hay una lista para los generos de juego.
+
+He intentando dividir el CSS y comentarlo un poco usando IA, pero al ir aprendiendo sobre la marcha se me ha hecho algo complicado mantener un orden.

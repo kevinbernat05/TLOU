@@ -229,7 +229,7 @@ details[open] summary:before {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
+/* color linea */
 details[open] summary {
     color: #e7e792;
 }
