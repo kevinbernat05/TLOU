@@ -517,17 +517,21 @@ button[type="submit"]:hover {
 
 .RSS {
     position: fixed;  /* La deja fija en pantalla */
-    bottom: 25%;  /* Distancia desde abajo */
-    left: 5%;  /* Distancia desde la izquierda */
+    bottom: 15%;  /* Distancia desde abajo */
+    left: 90%;  /* Distancia desde la izquierda */
     padding: 10px;  /* Espaciado interno */
     border-radius: 8px;  /* Bordes redondeados */
 }
 .RSS a img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
-.RSS a img:hover {
-    transform: scale(1.2);  /* Efecto al pasar el ratón */
+
+.RSS a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.RSS a {
+    display: inline-block;
 }
 
