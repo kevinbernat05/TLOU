@@ -517,8 +517,8 @@ button[type="submit"]:hover {
 
 .RSS {
     position: fixed;  /* La deja fija en pantalla */
-    bottom: 15%;  /* Distancia desde abajo */
-    left: 90%;  /* Distancia desde la izquierda */
+    bottom: 25%;  /* Distancia desde abajo */
+    left: 5%;  /* Distancia desde la izquierda */
     padding: 10px;  /* Espaciado interno */
     border-radius: 8px;  /* Bordes redondeados */
 }
