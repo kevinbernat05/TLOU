@@ -514,3 +514,20 @@ button[type="submit"]:hover {
 .requisitos dd:last-child {
     margin-bottom: 20px;
 }
+
+.RSS {
+    position: fixed;  /* La deja fija en pantalla */
+    bottom: 15%;  /* Distancia desde abajo */
+    left: 90%;  /* Distancia desde la izquierda */
+    padding: 10px;  /* Espaciado interno */
+    border-radius: 8px;  /* Bordes redondeados */
+}
+.RSS a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+.RSS a img:hover {
+    transform: scale(1.2);  /* Efecto al pasar el ratón */
+}
+
