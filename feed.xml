@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>The Last of Us</title>
+        <link>https://kevinbernat05.github.io/TLOU/</link>
+        <description>Pagina web sobre TLOU creada por Kevin Romero Bernat.</description>
+        <language>es-ES</language>
+        <webMaster>alurom1484@ieselcaminas.org</webMaster>
+        <!--  La parte variable, la que corresponde a cada noticia o ítem  -->
+
+        <item>
+        <title>The Last of Us</title>
+        <link>https://kevinbernat05.github.io/TLOU/index.html</link>
+        <description>Kevin Romero Bernat</description>
+        <pubDate>Tue, 20 Feb 2025 10:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+        <title>The Last of Us - Informacion</title>
+        <link>https://kevinbernat05.github.io/TLOU/informacion.html</link>
+        <description>Kevin Romero Bernat</description>
+        <pubDate>Tue, 20 Feb 2025 10:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+        <title>The Last of Us - Formulario</title>
+        <link>https://kevinbernat05.github.io/TLOU/formulario.html</link>
+        <description>Kevin Romero Bernat</description>
+        <pubDate>Tue, 20 Feb 2025 10:00:00 GMT</pubDate>
+        </item>
+        
+    </channel>
+</rss>
