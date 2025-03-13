@@ -1,4 +1,4 @@
-/* -------------------------------------------------- */
+S/* -------------------------------------------------- */
 /*                Estilos Generales                  */
 /* -------------------------------------------------- */
 
@@ -551,6 +551,7 @@ button[type="submit"]:hover {
 }
 
 #Formulario {
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -606,6 +607,46 @@ button:hover {
     background-color: #cc5500;
 }
 
+
+    
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .nav-link, .nav-tittle {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    #Formulario {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link, .nav-tittle {
+        font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
 
 
 
